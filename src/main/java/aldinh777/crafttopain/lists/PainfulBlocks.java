@@ -1,5 +1,6 @@
 package aldinh777.crafttopain.lists;
 
+import aldinh777.crafttopain.block.BlockItemSlot;
 import aldinh777.crafttopain.block.PainfulBlock;
 import com.google.common.collect.Lists;
 import net.minecraft.block.Block;
@@ -23,6 +24,6 @@ public class PainfulBlocks {
         CRAFTING_CORE = new PainfulBlock(Material.WOOD, "crafting_core");
         SMELTING_CORE = new PainfulBlock(Material.ROCK, "smelting_core");
 
-        ITEM_SLOT = new PainfulBlock(Material.WOOD, "item_slot");
+        ITEM_SLOT = new BlockItemSlot(Material.WOOD, "item_slot");
     }
 }
