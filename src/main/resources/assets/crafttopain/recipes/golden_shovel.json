@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#",
+    "B",
+    "H"
+  ],
+  "key": {
+    "#": {
+      "item": "crafttopain:golden_blade"
+    },
+    "B": {
+      "item": "crafttopain:golden_bind"
+    },
+    "H": {
+      "item": "crafttopain:tool_handle"
+    }
+  },
+  "result": {
+    "item": "minecraft:golden_shovel"
+  }
+}

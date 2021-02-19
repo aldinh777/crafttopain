@@ -1,0 +1,15 @@
+itemGroup.crafttopain=Craft to Pain
+
+item.tool_body.name=Tool Body
+item.tool_handle.name=Tool Handle
+
+item.wooden_bind.name=Wooden Bind
+item.wooden_blade.name=Wooden Blade
+item.stone_bind.name=Stone Bind
+item.stone_blade.name=Stone Blade
+item.iron_bind.name=Iron Bind
+item.iron_blade.name=Iron Blade
+item.golden_bind.name=Golden Bind
+item.golden_blade.name=Golden Blade
+item.diamond_bind.name=Diamond Bind
+item.diamond_blade.name=Diamond Blade

@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#B",
+    " I",
+    " H"
+  ],
+  "key": {
+    "#": {
+      "item": "crafttopain:diamond_blade"
+    },
+    "B": {
+      "item": "crafttopain:diamond_bind"
+    },
+    "I": {
+      "item": "crafttopain:tool_body"
+    },
+    "H": {
+      "item": "crafttopain:tool_handle"
+    }
+  },
+  "result": {
+    "item": "minecraft:diamond_hoe"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#B#",
+    " I ",
+    " H "
+  ],
+  "key": {
+    "#": {
+      "item": "crafttopain:golden_blade"
+    },
+    "B": {
+      "item": "crafttopain:golden_bind"
+    },
+    "I": {
+      "item": "crafttopain:tool_body"
+    },
+    "H": {
+      "item": "crafttopain:tool_handle"
+    }
+  },
+  "result": {
+    "item": "minecraft:golden_pickaxe"
+  }
+}

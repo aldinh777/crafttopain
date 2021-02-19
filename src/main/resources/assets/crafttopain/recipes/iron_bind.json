@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " I ",
+    "###",
+    " I "
+  ],
+  "key": {
+    "I": {
+      "item": "crafttopain:tool_body"
+    },
+    "#": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "result": {
+    "item": "crafttopain:iron_bind"
+  }
+}

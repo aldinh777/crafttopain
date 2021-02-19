@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#",
+    "B",
+    "H"
+  ],
+  "key": {
+    "#": {
+      "item": "crafttopain:stone_blade"
+    },
+    "B": {
+      "item": "crafttopain:stone_bind"
+    },
+    "H": {
+      "item": "crafttopain:tool_handle"
+    }
+  },
+  "result": {
+    "item": "minecraft:stone_shovel"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#",
+    "B",
+    "H"
+  ],
+  "key": {
+    "#": {
+      "item": "crafttopain:diamond_blade"
+    },
+    "B": {
+      "item": "crafttopain:diamond_bind"
+    },
+    "H": {
+      "item": "crafttopain:tool_handle"
+    }
+  },
+  "result": {
+    "item": "minecraft:diamond_shovel"
+  }
+}
