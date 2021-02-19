@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "##",
+    "II"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:cobblestone"
+    },
+    "I": {
+      "item": "crafttopain:tool_body"
+    }
+  },
+  "result": {
+    "item": "crafttopain:smelting_stand"
+  }
+}

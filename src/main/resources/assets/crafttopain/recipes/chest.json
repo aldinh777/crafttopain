@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "1#2",
+    "#0#",
+    "3#4"
+  ],
+  "key": {
+    "#": {
+      "type": "forge:ore_dict",
+      "ore": "plankWood"
+    },
+    "0": {
+      "item": "crafttopain:item_slot"
+    },
+    "1": {
+      "item": "crafttopain:wooden_part_topleft"
+    },
+    "2": {
+      "item": "crafttopain:wooden_part_topright"
+    },
+    "3": {
+      "item": "crafttopain:wooden_part_bottomleft"
+    },
+    "4": {
+      "item": "crafttopain:wooden_part_bottomright"
+    }
+  },
+  "result": {
+    "item": "minecraft:chest"
+  }
+}

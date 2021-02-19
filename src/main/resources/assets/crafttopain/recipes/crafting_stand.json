@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "##",
+    "II"
+  ],
+  "key": {
+    "#": {
+      "type": "forge:ore_dict",
+      "ore": "plankWood"
+    },
+    "I": {
+      "item": "crafttopain:tool_body"
+    }
+  },
+  "result": {
+    "item": "crafttopain:crafting_stand"
+  }
+}

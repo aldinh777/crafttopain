@@ -1,0 +1,38 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "102",
+    "|#|",
+    "3_4"
+  ],
+  "key": {
+    "#": {
+      "item": "crafttopain:smelting_core"
+    },
+    "_": {
+      "item": "crafttopain:smelting_stand"
+    },
+    "|": {
+      "item": "minecraft:stone",
+      "data": 0
+    },
+    "0": {
+      "item": "crafttopain:item_slot"
+    },
+    "1": {
+      "item": "crafttopain:stone_part_topleft"
+    },
+    "2": {
+      "item": "crafttopain:stone_part_topright"
+    },
+    "3": {
+      "item": "crafttopain:stone_part_bottomleft"
+    },
+    "4": {
+      "item": "crafttopain:stone_part_bottomright"
+    }
+  },
+  "result": {
+    "item": "minecraft:furnace"
+  }
+}

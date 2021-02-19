@@ -1,6 +1,8 @@
 package aldinh777.crafttopain.common;
 
+import aldinh777.crafttopain.lists.PainfulBlocks;
 import aldinh777.crafttopain.lists.PainfulItems;
+import net.minecraft.block.Block;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.event.ModelRegistryEvent;
@@ -16,6 +18,7 @@ public class RegistryHandler {
 
     public static void preInit() {
         PainfulItems.init();
+        PainfulBlocks.init();
     }
 
     public static void init() {
@@ -25,6 +28,11 @@ public class RegistryHandler {
     @SubscribeEvent
     public static void onItemRegister(RegistryEvent.Register<Item> event) {
         event.getRegistry().registerAll(PainfulItems.LIST.toArray(new Item[0]));
+    }
+
+    @SubscribeEvent
+    public static void onBlockRegister(RegistryEvent.Register<Block> event) {
+        event.getRegistry().registerAll(PainfulBlocks.LIST.toArray(new Block[0]));
     }
 
     @SubscribeEvent

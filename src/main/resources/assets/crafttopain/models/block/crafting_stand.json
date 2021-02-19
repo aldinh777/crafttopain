@@ -1,0 +1,7 @@
+{
+    "parent": "block/cube_column",
+    "textures": {
+        "end": "crafttopain:blocks/crafting_stand_top",
+        "side": "crafttopain:blocks/crafting_stand"
+    }
+}

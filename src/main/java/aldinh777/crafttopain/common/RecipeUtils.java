@@ -1,6 +1,7 @@
 package aldinh777.crafttopain.common;
 
 import com.google.common.collect.Lists;
+import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -67,5 +68,9 @@ public class RecipeUtils {
         removeRecipe(Items.DIAMOND_PICKAXE);
         removeRecipe(Items.DIAMOND_SHOVEL);
         removeRecipe(Items.DIAMOND_HOE);
+
+        removeRecipe(Item.getItemFromBlock(Blocks.CRAFTING_TABLE));
+        removeRecipe(Item.getItemFromBlock(Blocks.FURNACE));
+        removeRecipe(Item.getItemFromBlock(Blocks.CHEST));
     }
 }

@@ -1,0 +1,38 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "102",
+    "|#|",
+    "3_4"
+  ],
+  "key": {
+    "#": {
+      "item": "crafttopain:crafting_core"
+    },
+    "_": {
+      "item": "crafttopain:crafting_stand"
+    },
+    "|": {
+      "type": "forge:ore_dict",
+      "ore": "plankWood"
+    },
+    "0": {
+      "item": "crafttopain:item_slot"
+    },
+    "1": {
+      "item": "crafttopain:wooden_part_topleft"
+    },
+    "2": {
+      "item": "crafttopain:wooden_part_topright"
+    },
+    "3": {
+      "item": "crafttopain:wooden_part_bottomleft"
+    },
+    "4": {
+      "item": "crafttopain:wooden_part_bottomright"
+    }
+  },
+  "result": {
+    "item": "minecraft:crafting_table"
+  }
+}

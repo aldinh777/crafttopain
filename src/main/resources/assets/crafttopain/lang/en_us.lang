@@ -13,3 +13,18 @@ item.golden_bind.name=Golden Bind
 item.golden_blade.name=Golden Blade
 item.diamond_bind.name=Diamond Bind
 item.diamond_blade.name=Diamond Blade
+
+item.wooden_part_topleft.name=Wooden Part (Top Left)
+item.wooden_part_topright.name=Wooden Part (Top Right)
+item.wooden_part_bottomleft.name=Wooden Part (Bottom Left)
+item.wooden_part_bottomright.name=Wooden Part (Bottom Right)
+item.stone_part_topleft.name=Stone Part (Top Left)
+item.stone_part_topright.name=Stone Part (Top Right)
+item.stone_part_bottomleft.name=Stone Part (Bottom Left)
+item.stone_part_bottomright.name=Stone Part (Bottom Right)
+
+tile.crafting_stand.name=Crafting Stand
+tile.smelting_stand.name=Smelting Stand
+tile.crafting_core.name=Crafting Core
+tile.smelting_core.name=Smelting Core
+tile.item_slot.name=Item Slot

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "12",
+    "34"
+  ],
+  "key": {
+    "1": {
+      "item": "crafttopain:wooden_part_topleft"
+    },
+    "2": {
+      "item": "crafttopain:wooden_part_topright"
+    },
+    "3": {
+      "item": "crafttopain:wooden_part_bottomleft"
+    },
+    "4": {
+      "item": "crafttopain:wooden_part_bottomright"
+    }
+  },
+  "result": {
+    "item": "crafttopain:item_slot"
+  }
+}
