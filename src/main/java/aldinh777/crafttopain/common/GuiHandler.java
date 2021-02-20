@@ -1,7 +1,10 @@
 package aldinh777.crafttopain.common;
 
+import aldinh777.crafttopain.container.ContainerCraftingCore;
 import aldinh777.crafttopain.container.ContainerItemSlot;
+import aldinh777.crafttopain.gui.GuiCraftingCore;
 import aldinh777.crafttopain.gui.GuiItemSlot;
+import aldinh777.crafttopain.tiles.TileCraftingCore;
 import aldinh777.crafttopain.tiles.TileItemSlot;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
@@ -22,6 +25,9 @@ public class GuiHandler implements IGuiHandler {
             case 0:
                 TileItemSlot itemSlot = (TileItemSlot) tileEntity;
                 return new ContainerItemSlot(player.inventory, Objects.requireNonNull(itemSlot));
+            case 1:
+                TileCraftingCore craftingCore = (TileCraftingCore) tileEntity;
+                return new ContainerCraftingCore(player.inventory, Objects.requireNonNull(craftingCore));
             default:
                 return null;
         }
@@ -35,6 +41,9 @@ public class GuiHandler implements IGuiHandler {
             case 0:
                 TileItemSlot itemSlot = (TileItemSlot) tileEntity;
                 return new GuiItemSlot(player.inventory, Objects.requireNonNull(itemSlot));
+            case 1:
+                TileCraftingCore craftingCore = (TileCraftingCore) tileEntity;
+                return new GuiCraftingCore(player.inventory, Objects.requireNonNull(craftingCore));
             default:
                 return null;
         }

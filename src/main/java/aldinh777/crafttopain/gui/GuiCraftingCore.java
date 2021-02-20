@@ -1,23 +1,25 @@
 package aldinh777.crafttopain.gui;
 
-import aldinh777.crafttopain.container.ContainerItemSlot;
+import aldinh777.crafttopain.container.ContainerCraftingCore;
+import aldinh777.crafttopain.tiles.TileCraftingCore;
 import aldinh777.crafttopain.tiles.TileItemSlot;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.world.World;
 
 import java.util.Objects;
 
-public class GuiItemSlot extends GuiContainer {
+public class GuiCraftingCore extends GuiContainer {
 
-    private static final String TEXTURE = "crafttopain:textures/gui/item_slot.png";
+    private static final String TEXTURE = "crafttopain:textures/gui/crafting_core.png";
     private static final ResourceLocation TEXTURES = new ResourceLocation(TEXTURE);
     private final InventoryPlayer player;
-    private final TileItemSlot tileEntity;
+    private final TileCraftingCore tileEntity;
 
-    public GuiItemSlot(InventoryPlayer player, TileItemSlot tileEntity) {
-        super(new ContainerItemSlot(player, tileEntity));
+    public GuiCraftingCore(InventoryPlayer player, TileCraftingCore tileEntity) {
+        super(new ContainerCraftingCore(player, tileEntity));
         this.player = player;
         this.tileEntity = tileEntity;
     }
@@ -32,8 +34,9 @@ public class GuiItemSlot extends GuiContainer {
     @Override
     protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY) {
         String tileName = Objects.requireNonNull(this.tileEntity.getDisplayName()).getUnformattedText();
+        String inventory = this.player.getDisplayName().getFormattedText();
         this.fontRenderer.drawString(tileName, (this.xSize / 2 - this.fontRenderer.getStringWidth(tileName) / 2) + 3, 6, 4210752);
-        this.fontRenderer.drawString(this.player.getDisplayName().getFormattedText(), 7, this.ySize - 96 + 2, 4210752);
+        this.fontRenderer.drawString(inventory, 7, this.ySize - 96 + 2, 4210752);
     }
 
     @Override
