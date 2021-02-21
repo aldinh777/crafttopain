@@ -1,7 +1,7 @@
 package aldinh777.crafttopain.gui;
 
-import aldinh777.crafttopain.container.ContainerCraftingCore;
-import aldinh777.crafttopain.tiles.TileCraftingCore;
+import aldinh777.crafttopain.container.ContainerSmeltingCore;
+import aldinh777.crafttopain.tiles.TileSmeltingCore;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.entity.player.InventoryPlayer;
@@ -9,15 +9,15 @@ import net.minecraft.util.ResourceLocation;
 
 import java.util.Objects;
 
-public class GuiCraftingCore extends GuiContainer {
+public class GuiSmeltingCore extends GuiContainer {
 
-    private static final String TEXTURE = "textures/gui/container/crafting_table.png";
+    private static final String TEXTURE = "textures/gui/container/furnace.png";
     private static final ResourceLocation TEXTURES = new ResourceLocation(TEXTURE);
     private final InventoryPlayer player;
-    private final TileCraftingCore tileEntity;
+    private final TileSmeltingCore tileEntity;
 
-    public GuiCraftingCore(InventoryPlayer player, TileCraftingCore tileEntity) {
-        super(new ContainerCraftingCore(player, tileEntity));
+    public GuiSmeltingCore(InventoryPlayer player, TileSmeltingCore tileEntity) {
+        super(new ContainerSmeltingCore(player, tileEntity));
         this.player = player;
         this.tileEntity = tileEntity;
     }
@@ -42,5 +42,29 @@ public class GuiCraftingCore extends GuiContainer {
         GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);
         this.mc.getTextureManager().bindTexture(TEXTURES);
         this.drawTexturedModalRect(this.guiLeft, this.guiTop, 0, 0, this.xSize, this.ySize);
+
+        int i = (this.width - this.xSize) / 2;
+        int j = (this.height - this.ySize) / 2;
+        if (this.tileEntity.getField(0) > 0) {
+            int k = this.getBurnLeftScaled();
+            this.drawTexturedModalRect(i + 56, j + 36 + 12 - k, 176, 12 - k, 14, k + 1);
+        }
+
+        int l = this.getCookProgressScaled();
+        this.drawTexturedModalRect(i + 79, j + 34, 176, 14, l + 1, 16);
+    }
+
+    private int getCookProgressScaled() {
+        int i = this.tileEntity.getField(2);
+        int j = this.tileEntity.getField(3);
+        return j != 0 && i != 0 ? i * 24 / j : 0;
+    }
+
+    private int getBurnLeftScaled() {
+        int i = this.tileEntity.getField(0);
+        if (i == 0) {
+            i = 200;
+        }
+        return this.tileEntity.getField(1) * 13 / i;
     }
 }

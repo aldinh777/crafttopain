@@ -64,7 +64,7 @@ public class IngredientsHelper {
 
     public boolean compareInputs(ArrayList<ItemStack> inputs) {
         for (int i = 0; i < 9; i++) {
-            if (!(this.inputs.get(i).getItem() == inputs.get(i).getItem())) {
+            if (this.inputs.get(i).getItem() != inputs.get(i).getItem()) {
                 return true;
             }
         }

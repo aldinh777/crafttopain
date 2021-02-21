@@ -14,6 +14,7 @@ import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TextComponentString;
 import net.minecraftforge.items.IItemHandler;
 
+import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import java.util.ArrayList;
 
@@ -22,14 +23,14 @@ public class TileCraftingCore extends TileItemSlot implements ITickable {
     private IngredientsHelper ingredientsHelper;
     private ItemStack latestResult = ItemStack.EMPTY;
 
-    @Nullable
+    @Nonnull
     @Override
     public ITextComponent getDisplayName() {
         return new TextComponentString("Crafting Work Station");
     }
 
     @Override
-    public boolean isUsableByPlayer(EntityPlayer player) {
+    public boolean isUsableByPlayer(@Nonnull EntityPlayer player) {
         if (CraftingCore.isStructureCompleted(this.world, this.pos)) {
             return super.isUsableByPlayer(player);
         }
@@ -111,6 +112,7 @@ public class TileCraftingCore extends TileItemSlot implements ITickable {
         if (!this.world.isRemote) {
             if (inputsChanged() || outputChanged()) {
                 changeOutput();
+                this.markDirty();
             }
         }
     }

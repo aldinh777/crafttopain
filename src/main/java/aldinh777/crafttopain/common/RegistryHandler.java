@@ -5,6 +5,7 @@ import aldinh777.crafttopain.lists.PainfulBlocks;
 import aldinh777.crafttopain.lists.PainfulItems;
 import aldinh777.crafttopain.tiles.TileCraftingCore;
 import aldinh777.crafttopain.tiles.TileItemSlot;
+import aldinh777.crafttopain.tiles.TileSmeltingCore;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
@@ -43,8 +44,10 @@ public class RegistryHandler {
 
         ResourceLocation itemSlot = new ResourceLocation("crafttopain:item_slot");
         ResourceLocation craftingCore = new ResourceLocation("crafttopain:crafting_core");
+        ResourceLocation smeltingCore = new ResourceLocation("crafttopain:smelting_core");
         GameRegistry.registerTileEntity(TileItemSlot.class, itemSlot);
         GameRegistry.registerTileEntity(TileCraftingCore.class, craftingCore);
+        GameRegistry.registerTileEntity(TileSmeltingCore.class, smeltingCore);
     }
 
     @SubscribeEvent
