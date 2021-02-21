@@ -93,9 +93,7 @@ public class ContainerCraftingCore extends Container {
             itemstack = stack.copy();
 
             if (index < 10) {
-                if (!this.mergeItemStack(stack, index, index + 1, false)) {
-                    return ItemStack.EMPTY;
-                }
+                return ItemStack.EMPTY;
             } else if (index < 37) {
                 if (!this.mergeItemStack(stack, 37, 46, false)) {
                     return ItemStack.EMPTY;

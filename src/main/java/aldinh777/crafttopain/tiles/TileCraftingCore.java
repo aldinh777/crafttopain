@@ -20,6 +20,7 @@ import java.util.ArrayList;
 public class TileCraftingCore extends TileItemSlot implements ITickable {
 
     private IngredientsHelper ingredientsHelper;
+    private ItemStack latestResult = ItemStack.EMPTY;
 
     @Nullable
     @Override
@@ -63,8 +64,13 @@ public class TileCraftingCore extends TileItemSlot implements ITickable {
         return true;
     }
 
+    private boolean outputChanged() {
+        ItemStack output = this.itemHandler.getStackInSlot(0);
+        return output.getItem() != this.latestResult.getItem();
+    }
+
     private void changeOutput() {
-        if (ingredientsHelper.isEmpty()) {
+        if (this.ingredientsHelper.isEmpty()) {
             this.itemHandler.setStackInSlot(0, ItemStack.EMPTY);
             return;
         }
@@ -93,15 +99,17 @@ public class TileCraftingCore extends TileItemSlot implements ITickable {
 
         if (success) {
             this.itemHandler.setStackInSlot(0, result.copy());
+            this.latestResult = result.copy();
         } else {
             this.itemHandler.setStackInSlot(0, ItemStack.EMPTY);
+            this.latestResult = ItemStack.EMPTY;
         }
     }
 
     @Override
     public void update() {
         if (!this.world.isRemote) {
-            if (inputsChanged()) {
+            if (inputsChanged() || outputChanged()) {
                 changeOutput();
             }
         }
