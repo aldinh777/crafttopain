@@ -139,10 +139,10 @@ public class TileSmeltingCore extends TileItemSlot implements ITickable {
         ItemStack result = FurnaceRecipes.instance().getSmeltingResult(input);
         if (output.isEmpty()) {
             outputHandler.setStackInSlot(0, result.copy());
-            return;
-        }
-        if (output.getCount() < output.getMaxStackSize()) {
+        } else if (output.getCount() < output.getMaxStackSize()) {
             output.grow(1);
+        } else {
+            return;
         }
         input.shrink(1);
     }
