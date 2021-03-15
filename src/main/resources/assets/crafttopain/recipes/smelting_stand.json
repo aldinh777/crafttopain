@@ -6,7 +6,8 @@
   ],
   "key": {
     "#": {
-      "item": "minecraft:cobblestone"
+      "type": "forge:ore_dict",
+      "ore": "cobblestone"
     },
     "I": {
       "item": "crafttopain:tool_body"
