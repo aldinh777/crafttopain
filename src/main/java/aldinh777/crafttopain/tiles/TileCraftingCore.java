@@ -15,7 +15,6 @@ import net.minecraft.util.text.TextComponentString;
 import net.minecraftforge.items.IItemHandler;
 
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 import java.util.ArrayList;
 
 public class TileCraftingCore extends TileItemSlot implements ITickable {

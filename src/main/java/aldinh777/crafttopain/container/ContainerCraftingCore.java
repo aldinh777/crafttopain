@@ -11,6 +11,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandler;
+import net.minecraftforge.items.ItemStackHandler;
 import net.minecraftforge.items.SlotItemHandler;
 
 import javax.annotation.Nonnull;
@@ -56,7 +57,13 @@ public class ContainerCraftingCore extends Container {
                             IItemHandler itemHandler = itemSlot.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null);
                             if (itemHandler != null) {
                                 ItemStack slotStack =  itemHandler.getStackInSlot(0);
+                                ItemStack container = slotStack.getItem().getContainerItem(slotStack);
                                 slotStack.shrink(1);
+                                if (slotStack.isEmpty()) {
+                                    if (itemHandler instanceof ItemStackHandler) {
+                                        ((ItemStackHandler) itemHandler).setStackInSlot(0, container.copy());
+                                    }
+                                }
                             }
                         }
                     }
